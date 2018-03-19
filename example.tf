@@ -9,7 +9,7 @@ terraform {
   required_version = ">=0.11"
 }
 
-resource "random_string" "password" {
-  length = 16
-  special = false
+resource "aws_efs_file_system" "data" {
+  creation_token = "teamcity-backups"
 }
+
